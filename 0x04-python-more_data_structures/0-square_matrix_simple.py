@@ -1,5 +1,3 @@
 #!/usr/bin/python3
 def square_matrix_simple(matrix=[]):
-    if not matrix:
-        print()
     return ([list(map(lambda x: x**2, row))f for row in matrix])
