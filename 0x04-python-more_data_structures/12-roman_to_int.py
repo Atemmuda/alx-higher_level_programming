@@ -10,7 +10,7 @@ def roman_to_int(roman_string):
             'M': 1000
             }
     numerical_value = 0
-    
+
     for i in range(len(roman_string) - 1):
         left_char = roman_string[i]
         rigth_char = roman_string[i + 1]
