@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 def weight_average(my_list=[]):
     summation = 0
-    weighted_average
     count = 0
     if my_list:
         for (value, weight) in my_list:
