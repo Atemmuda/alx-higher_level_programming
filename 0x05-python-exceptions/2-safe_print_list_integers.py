@@ -9,9 +9,3 @@ def safe_print_list_integers(my_list=[], x=0):
             pass
         print()
         return count
-
-"""Test"""
-my_list = [1, 2, 3, 4, 5]
-
-nb_print = safe_print_list_integers(my_list, 2)
-print("nb_print: {:d}".format(nb_print))
