@@ -1,0 +1,51 @@
+The ``0-add-integer`` module
+=============================
+
+Using ``add_integer``
+---------------------
+
+Testing a function module using a text file. First import
+``add_integer`` from ``Add_integer`` module:
+>>> add_integer = __import__("0-add_integer").add_integer
+
+Testing for normal situation:
+>>> add_integer(20)
+118
+
+>>> add_integer(20, 10)
+30
+
+>>> add_integer(20, 109)
+129
+
+Testing for float convertion into integer:
+>>> add_integer(20, 10.9999999999999)
+30
+
+Testing for the wrong type of the input:
+>>> try:
+...     print(add_integer(4, "School"))
+... except Exception as e:
+...     print(e)
+b must be an integer
+
+>>> try:
+...     print(add_integer(None))
+... except Exception as e:
+...     print(e)
+a must be an integer
+
+>>> add_integer(float('nan'), 1) #doctest: +IGNORE_EXCEPTION_DETAIL
+Traceback (most recent call last):
+    ...
+ValueError: cannot convert float NaN to integer
+
+>>> add_integer(float('inf'), 1) #doctest: +IGNORE_EXCEPTION_DETAIL
+Traceback (most recent call last):
+    ...
+OverflowError:
+
+>>> add_integer(-float('inf'), 1) #doctest: +IGNORE_EXCEPTION_DETAIL
+Traceback (most recent call last):
+    ...
+OverflowError:
