@@ -22,14 +22,14 @@ Testing for non-list-of-list matrix
 >>> divide_list(b_list, 4.5)
 Traceback (most recent call last):
     ...
-TypeError: matrix must be a matrix (list of lists)
+TypeError: TypeError: matrix must be a matrix (list of lists) of integers/floats
 
 Testing for not-int or not-float matrix
 >>> c_list = [[2, "2", 6, 8], [True, 4, 1, 6,], [7, 6, 2, 8,]]
 >>> divide_list(c_list, 4.5)
 Traceback (most recent call last):
     ...
-TypeError: matrix must be a matrix (list of lists)
+TypeError: TypeError: matrix must be a matrix (list of lists) of integers/float
 
 Testing for unequal length rows
 >>r_list = [[2, 4, 6], [2, 4, 1, 6,], [7, 6, 2, 8,]]

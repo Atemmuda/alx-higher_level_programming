@@ -15,8 +15,8 @@ def divide_list(matrix, div):
         list: new elements which results from dividing each element of
         the matrix with div
     """
-    error_message = 'matrix must be a matrix (list of lists)'
-    'of integers/floats'
+    error_message = """matrix must be a matrix (list of lists) \
+    of integers/floats"""
     if type(matrix) is not list:
         raise TypeError(error_message)
     row_len = []
