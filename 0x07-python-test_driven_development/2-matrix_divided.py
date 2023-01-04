@@ -1,4 +1,4 @@
-#!/usr/bin/pyrhon3
+#!/usr/bin/python3
 """Module containing function to generate new list (new_list) pf numbers
 that are as a result of previous list (my_list) divided by a a number (div)
 """
