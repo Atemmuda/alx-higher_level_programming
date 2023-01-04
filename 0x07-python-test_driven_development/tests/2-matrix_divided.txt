@@ -1,0 +1,51 @@
+The ``2-matrix_divided`` module
+===============================
+
+Using ``divide_list``
+--------------------
+
+import the module
+``divide_list`` from ``2-matrix_divided`` module:
+>>> divide_list = __import__("2-matrix_divided").divide_list
+
+Testing for normal situation
+>>> m_list = [[2, 4, 6, 8], [2, 4, 1, 6,], [7, 6, 2, 8,]]
+>>> divide_list(m_list, 4)
+[[0.5, 1.0, 1.5, 2.0], [0.5, 1.0, 0.25, 1.5], [1.75, 1.5, 0.5, 2.0]]
+
+Testing for float div
+>>> divide_list(m_list, 4.5)
+[[0.44, 0.89, 1.33, 1.78], [0.44, 0.89, 0.22, 1.33], [1.56, 1.33, 0.44, 1.78]]
+
+Testing for non-list-of-list matrix
+>>> b_list = [2, 4, 6, 8, 2, 4, 1, 6, 7, 6, 2, 8]
+>>> divide_list(b_list, 4.5)
+Traceback (most recent call last):
+    ...
+TypeError: matrix must be a matrix (list of lists)
+
+Testing for not-int or not-float matrix
+>>> c_list = [[2, "2", 6, 8], [True, 4, 1, 6,], [7, 6, 2, 8,]]
+>>> divide_list(c_list, 4.5)
+Traceback (most recent call last):
+    ...
+TypeError: matrix must be a matrix (list of lists)
+
+Testing for unequal length rows
+>>r_list = [[2, 4, 6], [2, 4, 1, 6,], [7, 6, 2, 8,]]
+divide_list(r_list, 4.5)
+Traceback (most recent call last):
+    ...
+TypeError: Each row of the matrix must have the same size
+
+Testing for string div
+>>> divide_list(m_list, "1")
+Traceback (most recent call last):
+    ...
+TypeError: div must be a number
+
+Testing for zero-value for div
+>>> divide_list(m_list, 0)
+Traceback (most recent call last):
+    ...
+ZeroDivisionError: division by zero
