@@ -1,0 +1,14 @@
+ndentation`` module
+====================================
+
+Using ``text_indentation``
+--------------------------
+
+Importing module:
+>>> text_indentation = __import__("5-text_indentation").text_indentation
+
+Testing for wrong input ie text != string:
+>>> text_indentation(True)
+Traceback (most recent call last):
+    ...
+TypeError: text must be string
