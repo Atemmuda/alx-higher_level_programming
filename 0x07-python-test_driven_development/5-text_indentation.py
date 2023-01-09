@@ -4,6 +4,7 @@ by line. It contains no directly executable code
 It should be imported as a module
 """
 
+
 def text_indentation(text):
     """Print a given text by indenting
     when there is one of a given delimeters
