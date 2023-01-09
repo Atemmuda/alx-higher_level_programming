@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 """Module containing function to print string
 by line. It contains no directly executable code
 It should be imported as a module
